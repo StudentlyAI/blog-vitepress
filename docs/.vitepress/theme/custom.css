@@ -1,0 +1,104 @@
+:root {
+  --vp-c-brand: #ea580c;
+  --vp-c-brand-light: #f97316;
+  --vp-c-brand-lighter: #fb923c;
+  --vp-c-brand-dark: #c2410c;
+  --vp-c-brand-darker: #9a3412;
+  
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #fff8f3;
+  
+  --vp-c-text-1: #374151;
+  --vp-c-text-2: #6B7280;
+
+  /* Button colors */
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-bg: var(--vp-c-brand-dark);
+
+  /* Custom appearance switch styles */
+  --vp-appbar-height: 64px;
+}
+
+.dark {
+  --vp-c-bg: #1a1a1a;
+  --vp-c-bg-soft: #242424;
+  --vp-c-text-1: #E5E7EB;
+}
+
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPHomeHero .name,
+.VPHomeHero .text {
+  max-width: 576px;
+}
+
+.VPHomeHero .text {
+  line-height: 1.5;
+  font-size: 48px;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+
+.VPHero .image-bg {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.VPFeatures {
+  padding: 2rem 0;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.VPFeatures .box {
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.VPFeatures .box:hover {
+  border-color: var(--vp-c-brand);
+  background-color: var(--vp-c-bg);
+}
+
+/* Custom appearance switch styles */
+.VPNavBarAppearance {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.VPNavBarAppearance .VPSwitch {
+  border-radius: 8px;
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--vp-c-divider);
+  transition: border-color 0.25s;
+}
+
+.VPNavBarAppearance .VPSwitch:hover {
+  border-color: var(--vp-c-brand);
+}
+
+.VPNavBarAppearance .VPSwitch svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Move appearance switch out of mobile menu */
+.VPNavScreenAppearance {
+  display: none !important;
+}
+
+/* Always show the desktop appearance switch */
+@media (max-width: 768px) {
+  .VPNavBarAppearance {
+    display: flex !important;
+  }
+}
